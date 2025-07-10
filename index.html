@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mongolian Vowel Separator Inserter</title>
+<title>Combining Grapheme Joiner Inserter</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
 body {
@@ -68,12 +68,12 @@ button:hover {
 </head>
 <body>
 <div class="container">
-    <h1>Mongolian Vowel Separator Inserter</h1>
-    <p>Enter text below to insert a Mongolian vowel separator (U+180E) after every character.</p>
+    <h1>CGJ Inserter</h1>
+    <p>Enter text below to insert a Combining Grapheme Joiner (U+034F) after every character.</p>
 
     <textarea id="input" rows="4" placeholder="Enter your text here"></textarea>
 
-    <button onclick="insert()">Insert MVS</button>
+    <button onclick="insert()">Insert CGJ</button>
 
     <textarea id="output" rows="4" placeholder="Output will appear here"></textarea>
 </div>
@@ -81,7 +81,7 @@ button:hover {
 <script>
 function insert() {
     const input = document.getElementById('input').value;
-    const output = input.split('').join('\u180E');
+    const output = input.split('').join('\u034F');
     document.getElementById('output').value = output;
 }
 </script>
